@@ -1,0 +1,41 @@
+.header {
+    display: block;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+    }
+}  
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 0 65px;
+    p {
+        font-weight: 300;
+        span {
+          color: $gray;
+          font-weight: 600;
+          margin-left: 15px;
+        }
+        a {
+            color: $gray;
+            font-weight: bold;
+        }
+    }
+}
+@include maxw(1023px) {
+    .nav {
+        gap: 0 25px;
+        p {
+            display: none;
+        }
+    }
+    .header {
+        margin-bottom: 20px;
+        &-main {
+            padding: 20px;
+        }
+    }
+    
+}
